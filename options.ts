@@ -5,6 +5,7 @@ const colors = {
     "flamingo": "#f2cdcd",
     "pink": "#f5c2e7",
     "mauve": "#cba6f7",
+    "violet": "#c678dd",
     "red": "#f38ba8",
     "maroon": "#eba0ac",
     "peach": "#fab387",
@@ -24,6 +25,8 @@ const colors = {
     "surface2": "#585b70",
     "surface1": "#45475a",
     "surface0": "#313244",
+    "grey1": "#292f3a",
+    "grey2": "#3e4452",
     "base2": "#242438",
     "base": "#1e1e2e",
     "mantle": "#181825",
@@ -54,7 +57,7 @@ const options = mkOptions(OPTIONS, {
             }
         },
         bar: {
-            transparent: opt(false),
+            transparent: opt(true),
             background: opt(colors.crust),
             buttons: {
                 monochrome: opt(false),
@@ -67,14 +70,14 @@ const options = mkOptions(OPTIONS, {
                 dashboard: {
                     background: opt(colors.base2),
                     hover: opt(colors.surface1),
-                    icon: opt(colors.yellow)
+                    icon: opt(colors.blue)
                 },
                 workspaces: {
                     background: opt(colors.base2),
                     hover: opt(colors.surface1),
-                    available: opt(colors.sky),
-                    occupied: opt(colors.flamingo),
-                    active: opt(colors.pink),
+                    available: opt(colors.blue),
+                    occupied: opt(colors.mauve),
+                    active: opt(colors.red),
                 },
                 windowtitle: {
                     background: opt(colors.base2),

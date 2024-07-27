@@ -3,8 +3,10 @@ import { ActiveClient } from 'types/service/hyprland'
 
 const filterTitle = (windowtitle: ActiveClient) => {
     const windowTitleMap = [
-        ["kitty", "󰄛   Kitty Terminal"],
+        ["kitty", "󰄛   Kitty"],
         ["firefox", "󰈹   Firefox"],
+        ["floorp", "󰈹   Floorp"],
+	["brave-browser-nightly", "🦁 Brave"], 
         ["microsoft-edge", "󰇩   Edge"],
         ["discord", "    Discord"],
         ["org.kde.dolphin", "   Dolphin"],
