@@ -620,24 +620,24 @@ const options = mkOptions(OPTIONS, {
             shortcuts: {
                 left: {
                     shortcut1: {
-                        icon: opt("󰇩"),
-                        tooltip: opt("Microsoft Edge"),
-                        command: opt("microsoft-edge-stable")
+                        icon: opt(""),
+                        tooltip: opt("Emacs"),
+                        command: opt("/home/stig/.dotfiles/scripts/emc")
                     },
                     shortcut2: {
-                        icon: opt(""),
-                        tooltip: opt("Spotify"),
-                        command: opt("spotify-launcher")
+                        icon: opt("󰍡"),
+                        tooltip: opt("Ferdium"),
+                        command: opt("org.ferdium.Ferdium")
                     },
                     shortcut3: {
                         icon: opt(""),
                         tooltip: opt("Discord"),
-                        command: opt("discord")
+                        command: opt("xdg-open https://discord.com/app")
                     },
                     shortcut4: {
                         icon: opt(""),
                         tooltip: opt("Search Apps"),
-                        command: opt("rofi -show drun")
+                        command: opt("emc -cF '((visibility . nil))' -e '(emacs-run-desktop)'")
                     },
                 },
                 right: {
@@ -657,29 +657,29 @@ const options = mkOptions(OPTIONS, {
                 left: {
                     directory1: {
                         label: opt("󰉍 Downloads"),
-                        command: opt("bash -c \"dolphin $HOME/Downloads/\"")
+                        command: opt("bash -c \"ranger $HOME/Downloads/\"")
                     },
                     directory2: {
                         label: opt("󰉏 Videos"),
-                        command: opt("bash -c \"dolphin $HOME/Videos/\"")
+                        command: opt("bash -c \"ranger $HOME/Videos/\"")
                     },
                     directory3: {
-                        label: opt("󰚝 Projects"),
-                        command: opt("bash -c \"dolphin $HOME/Projects/\"")
+                        label: opt("󰚝 Dotfiles"),
+                        command: opt("bash -c \"ranger $HOME/.dotfiles/\"")
                     },
                 },
                 right: {
                     directory1: {
                         label: opt("󱧶 Documents"),
-                        command: opt("bash -c \"dolphin $HOME/Documents/\"")
+                        command: opt("bash -c \"ranger $HOME/Documents/\"")
                     },
                     directory2: {
                         label: opt("󰉏 Pictures"),
-                        command: opt("bash -c \"dolphin $HOME/Pictures/\"")
+                        command: opt("bash -c \"ranger $HOME/Pictures/\"")
                     },
                     directory3: {
                         label: opt("󱂵 Home"),
-                        command: opt("bash -c \"dolphin $HOME/\"")
+                        command: opt("bash -c \"ranger $HOME/\"")
                     },
                 }
             },
@@ -690,8 +690,8 @@ const options = mkOptions(OPTIONS, {
             },
             weather: {
                 interval: opt(60000),
-                unit: opt<"metric" | "imperial">("imperial"),
-                location: opt("Los Angeles"),
+                unit: opt<"metric" | "imperial">("metric"),
+                location: opt("Kolkata"),
                 key: opt<string>(
                     JSON.parse(Utils.readFile(`${App.configDir}/.weather.json`) || "{}")?.weather_api_key || "",
                 ),

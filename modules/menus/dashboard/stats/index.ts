@@ -64,7 +64,7 @@ const Stats = () => {
     const gpu = Variable(0, {
         poll: [
             2000,
-            "gpustat --json",
+            "echo",
             (out) => {
                 if (typeof out !== "string") {
                     return 0;
